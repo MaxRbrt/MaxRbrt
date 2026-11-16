@@ -1,4 +1,5 @@
 import io
+import random
 
 from PIL import Image, ImageOps
 
@@ -55,12 +56,18 @@ def gerarLinhasRetrato(avatarJpeg: bytes) -> list[str]:
 
 
 # ============================================================
-# 2. JANELA DE TERMINAL
+# 2. JANELA DE TERMINAL E RETRATO
 # ============================================================
 
 ALTURA_SCAN = 384
-CICLO_SCANNER = 5.0
 TOPO_CONTEUDO = 48
+CICLO_SCANNER = 6.5
+FIM_DESCIDA = .62
+INICIO_APAGAR = .88
+ALTURA_FAIXA_RUIDO = 22
+VARIANTES_RUIDO = 3
+COR_FUNDO_RETRATO = "#0A0F14"
+CAIXA_RETRATO = (24, TOPO_CONTEUDO + 8, 360, ALTURA_SCAN - TOPO_CONTEUDO - 30)
 
 
 def barraJanela(usuario: str) -> str:
@@ -71,21 +78,137 @@ def barraJanela(usuario: str) -> str:
 <rect x="8" y="40" width="{LARGURA_PAINEL - 16}" height="1" fill="{COR_BORDA}"/>"""
 
 
-def retratoAscii(linhas: list[str]) -> str:
+def textoRetrato(linhas: list[str]) -> str:
   alturaLinha = 8.4
-  topo = TOPO_CONTEUDO + 20
-  partes = [
-    f'<rect x="24" y="{TOPO_CONTEUDO + 8}" width="360" height="{ALTURA_SCAN - TOPO_CONTEUDO - 30}" rx="10" '
-    f'fill="#0A0F14" stroke="{COR_BORDA}"/>'
-  ]
+  topo = TOPO_CONTEUDO + 26
+  partes = []
   for indice, linha in enumerate(linhas):
-    y = topo + indice * alturaLinha + 6
-    demora = (y - TOPO_CONTEUDO) / (ALTURA_SCAN - TOPO_CONTEUDO) * CICLO_SCANNER
+    y = topo + indice * alturaLinha
     partes.append(
-      f'<text class="linha-retrato" {atraso(demora)} x="36" y="{numero(y)}" textLength="336" '
+      f'<text x="36" y="{numero(y)}" textLength="336" '
       f'lengthAdjust="spacingAndGlyphs" xml:space="preserve">{textoSvg(linha)}</text>'
     )
-  return f'<g class="mono surgir" font-size="8.6" fill="{COR_TURQUESA}">{"".join(partes)}</g>'
+  return "".join(partes)
+
+
+def embaralharLinhas(linhas: list[str], semente: int) -> list[str]:
+  sorteio = random.Random(semente)
+  caracteres = RAMPA_CARACTERES[1:]
+  return [
+    "".join(" " if caractere == " " else sorteio.choice(caracteres) for caractere in linha)
+    for linha in linhas
+  ]
+
+
+# ============================================================
+# 3. LINHA DO TEMPO DO SCANNER (SMIL, MESMO RELÓGIO PARA TUDO)
+# ============================================================
+
+
+def animacaoSmil(atributo: str, valores: list[float], tempos: list[float]) -> str:
+  return (
+    f'<animate attributeName="{atributo}" dur="{numero(CICLO_SCANNER)}s" '
+    f'repeatCount="indefinite" values="{";".join(numero(valor) for valor in valores)}" '
+    f'keyTimes="{";".join(numero(tempo) for tempo in tempos)}"/>'
+  )
+
+
+def posicoesScanner() -> tuple[float, float]:
+  _, topo, _, altura = CAIXA_RETRATO
+  return topo, topo + altura
+
+
+def coberturaRetrato() -> str:
+  x, topo, largura, altura = CAIXA_RETRATO
+  fundo = topo + altura
+  tempos = [0, FIM_DESCIDA, INICIO_APAGAR, INICIO_APAGAR, 1]
+  tempoOpacidade = [0, INICIO_APAGAR, INICIO_APAGAR, 1]
+  return (
+    f'<rect class="so-animado" x="{x + 1}" y="{topo + 1}" width="{largura - 2}" '
+    f'height="{altura - 2}" rx="9" fill="{COR_FUNDO_RETRATO}">'
+    + animacaoSmil("y", [topo + 1, fundo, fundo, topo + 1, topo + 1], tempos)
+    + animacaoSmil("height", [altura - 2, 0, 0, altura - 2, altura - 2], tempos)
+    + animacaoSmil("opacity", [1, 1, 0, 1], tempoOpacidade)
+    + "</rect>"
+  )
+
+
+def visibilidadeTemporaria() -> str:
+  tempos = [0, .03, FIM_DESCIDA - .02, FIM_DESCIDA + .02, 1]
+  return animacaoSmil("opacity", [0, 1, 1, 0, 0], tempos)
+
+
+def faixaRuido(linhas: list[str]) -> str:
+  x, topo, largura, _ = CAIXA_RETRATO
+  _, fundo = posicoesScanner()
+  recorte = (
+    f'<clipPath id="recorteRuido"><rect x="{x}" y="{topo}" width="{largura}" '
+    f'height="{ALTURA_FAIXA_RUIDO}">'
+    + animacaoSmil(
+      "y", [topo - ALTURA_FAIXA_RUIDO, fundo - ALTURA_FAIXA_RUIDO, fundo - ALTURA_FAIXA_RUIDO],
+      [0, FIM_DESCIDA, 1],
+    )
+    + "</rect></clipPath>"
+  )
+  variantes = [quadroRuido(linhas, indice) for indice in range(VARIANTES_RUIDO)]
+  return (
+    f'<defs>{recorte}</defs><g class="so-animado" clip-path="url(#recorteRuido)">'
+    + visibilidadeTemporaria()
+    + f'<rect x="{x}" y="{topo}" width="{largura}" height="{fundo - topo}" '
+    + f'fill="{COR_FUNDO_RETRATO}"/>'
+    + f'<g class="mono" font-size="8.6" fill="{COR_VERDE_CLARO}">{"".join(variantes)}</g></g>'
+  )
+
+
+def quadroRuido(linhas: list[str], indice: int) -> str:
+  passo = 1 / VARIANTES_RUIDO
+  valores = ";".join("1" if quadro == indice else "0" for quadro in range(VARIANTES_RUIDO))
+  tempos = ";".join(numero(quadro * passo) for quadro in range(VARIANTES_RUIDO))
+  return (
+    f'<g opacity="0"><animate attributeName="opacity" dur=".24s" repeatCount="indefinite" '
+    f'calcMode="discrete" values="{valores}" keyTimes="{tempos}"/>'
+    f'{textoRetrato(embaralharLinhas(linhas, indice))}</g>'
+  )
+
+
+def laserScanner() -> str:
+  x, topo, largura, altura = CAIXA_RETRATO
+  _, fundo = posicoesScanner()
+  return f"""<defs><linearGradient id="faixaScanner" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="{COR_TURQUESA}" stop-opacity="0"/>
+<stop offset=".8" stop-color="{COR_TURQUESA}" stop-opacity=".2"/>
+<stop offset="1" stop-color="{COR_VERDE_CLARO}" stop-opacity=".55"/>
+</linearGradient>
+<clipPath id="recorteLaser">
+<rect x="{x}" y="{topo}" width="{largura}" height="{altura}" rx="10"/>
+</clipPath>
+</defs>
+<g class="so-animado" clip-path="url(#recorteLaser)">{visibilidadeTemporaria()}<g>
+<animateTransform attributeName="transform" type="translate" dur="{numero(CICLO_SCANNER)}s"
+repeatCount="indefinite" values="0 {numero(topo)};0 {numero(fundo)};0 {numero(fundo)}"
+keyTimes="0;{numero(FIM_DESCIDA)};1"/>
+<rect x="{x}" y="-46" width="{largura}" height="46" fill="url(#faixaScanner)"/>
+<rect x="{x}" y="-1.5" width="{largura}" height="1.5" fill="{COR_VERDE_CLARO}"
+filter="url(#brilho)"/>
+</g></g>"""
+
+
+def retratoAscii(linhas: list[str]) -> str:
+  x, topo, largura, altura = CAIXA_RETRATO
+  moldura = (
+    f'<rect x="{x}" y="{topo}" width="{largura}" height="{altura}" rx="10" '
+    f'fill="{COR_FUNDO_RETRATO}" stroke="{COR_BORDA}"/>'
+  )
+  retrato = f'<g class="mono" font-size="8.6" fill="{COR_TURQUESA}">{textoRetrato(linhas)}</g>'
+  return (
+    f'<g class="surgir">{moldura}{retrato}{coberturaRetrato()}{faixaRuido(linhas)}'
+    f'{laserScanner()}</g>'
+  )
+
+
+# ============================================================
+# 4. FICHA DIGITADA E MONTAGEM DO PAINEL
+# ============================================================
 
 
 def linhasFicha(usuario: str, campos: list[tuple[str, str]]) -> tuple[str, float]:
@@ -120,25 +243,9 @@ def linhaDigitada(
   )
 
 
-def scannerHorizontal() -> str:
-  return f"""<defs><linearGradient id="faixaScanner" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="{COR_TURQUESA}" stop-opacity="0"/>
-<stop offset=".8" stop-color="{COR_TURQUESA}" stop-opacity=".2"/>
-<stop offset="1" stop-color="{COR_VERDE_CLARO}" stop-opacity=".55"/>
-</linearGradient></defs>
-<g class="scanner so-animado">
-<rect x="10" y="-46" width="{LARGURA_PAINEL - 20}" height="46" fill="url(#faixaScanner)"/>
-<rect x="10" y="-1.5" width="{LARGURA_PAINEL - 20}" height="1.5" fill="{COR_VERDE_CLARO}" filter="url(#brilho)"/>
-</g>"""
-
-
 def estiloScan() -> str:
-  return f"""
-.scanner{{animation:descer {CICLO_SCANNER}s linear infinite}}
-.linha-retrato{{animation:iluminar {CICLO_SCANNER}s linear infinite}}
-.cursor-final{{animation:piscar 1s steps(1) infinite}}
-@keyframes descer{{from{{transform:translateY({TOPO_CONTEUDO}px)}}to{{transform:translateY({ALTURA_SCAN}px)}}}}
-@keyframes iluminar{{0%{{fill:{COR_TEXTO}}}6%{{fill:{COR_VERDE_CLARO}}}14%,100%{{fill:{COR_TURQUESA}}}}}
+  return """
+.cursor-final{animation:piscar 1s steps(1) infinite}
 """
 
 
@@ -155,7 +262,6 @@ def gerarScan(usuario: str, avatarJpeg: bytes, campos: list[tuple[str, str]]) ->
     + retratoAscii(gerarLinhasRetrato(avatarJpeg))
     + fichaSvg
     + cursor
-    + scannerHorizontal()
   )
   titulo = f"Profile scan de @{usuario}: retrato ASCII e ficha técnica"
   return documentoSvg(LARGURA_PAINEL, ALTURA_SCAN, titulo, corpo, estiloScan())
