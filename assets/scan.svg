@@ -111,19 +111,19 @@ values="0;26.29;52.58;78.87;105.16;131.45;157.74;184.03;210.32;236.61;262.9;289.
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;19.78;39.56;59.34;79.12;98.9;118.68;138.46;158.24;178.02;197.8;217.58;237.36;257.14;276.92;296.7;316.48"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="222" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha7)"><tspan fill="#2DD4BF">linguagens</tspan><tspan x="491.84" fill="#E6EDF3">TypeScript 66% · JavaScript 12%</tspan></text><defs><clipPath id="recorteFicha8">
+</clipPath></defs><text class="mono" x="410" y="222" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha7)"><tspan fill="#2DD4BF">linguagens</tspan><tspan x="491.84" fill="#E6EDF3">TypeScript 65% · JavaScript 11%</tspan></text><defs><clipPath id="recorteFicha8">
 <rect x="408" y="229" width="0" height="18">
 <animate attributeName="width" begin="2.06s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;10.48;20.96;31.44;41.92;52.4;62.88;73.36;83.84;94.32;104.8;115.28;125.76;136.24;146.72;157.2;167.68"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="242" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha8)"><tspan fill="#2DD4BF">repos</tspan><tspan x="491.84" fill="#E6EDF3">11 públicos</tspan></text><defs><clipPath id="recorteFicha9">
+</clipPath></defs><text class="mono" x="410" y="242" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha8)"><tspan fill="#2DD4BF">repos</tspan><tspan x="491.84" fill="#E6EDF3">12 públicos</tspan></text><defs><clipPath id="recorteFicha9">
 <rect x="408" y="249" width="0" height="18">
 <animate attributeName="width" begin="2.28s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;19.78;39.56;59.34;79.12;98.9;118.68;138.46;158.24;178.02;197.8;217.58;237.36;257.14;276.92;296.7;316.48"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="262" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha9)"><tspan fill="#2DD4BF">atividade</tspan><tspan x="491.84" fill="#E6EDF3">211 contribuições no último ano</tspan></text><defs><clipPath id="recorteFicha10">
+</clipPath></defs><text class="mono" x="410" y="262" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha9)"><tspan fill="#2DD4BF">atividade</tspan><tspan x="491.84" fill="#E6EDF3">221 contribuições no último ano</tspan></text><defs><clipPath id="recorteFicha10">
 <rect x="408" y="269" width="0" height="18">
 <animate attributeName="width" begin="2.5s"
 dur="0.35s" fill="freeze" calcMode="discrete"

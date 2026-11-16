@@ -110,7 +110,7 @@ text-anchor="middle" fill="#6EE7B7">n8n</text>
 <g class="surgir" style="animation-delay:0.5s">
 <circle class="sinal" cx="742" cy="82" r="3.5" fill="#6EE7B7"/>
 <text class="mono" x="752" y="86" font-size="10.5" letter-spacing="2" fill="#94A3B8">SINAL</text>
-<text class="mono" x="775" y="142" font-size="46" font-weight="800" text-anchor="middle" fill="url(#destaque)" filter="url(#brilho)">211</text>
+<text class="mono" x="775" y="142" font-size="46" font-weight="800" text-anchor="middle" fill="url(#destaque)" filter="url(#brilho)">221</text>
 <text class="mono" x="775" y="168" font-size="11" text-anchor="middle" fill="#94A3B8">contribuições</text>
 <text class="mono" x="775" y="184" font-size="11" text-anchor="middle" fill="#94A3B8">no último ano</text>
 </g>
