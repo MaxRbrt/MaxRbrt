@@ -1,4 +1,3 @@
-import base64
 import io
 import json
 import os
@@ -27,22 +26,9 @@ class Linguagem:
 
 
 @dataclass
-class Repositorio:
-  nome: str
-  descricao: str
-  url: str
-  demo: str
-  linguagem: str
-  corLinguagem: str
-  topicos: list[str]
-  estrelas: int
-
-
-@dataclass
 class PerfilGithub:
   usuario: str
   nome: str
-  bio: str
   avatarJpeg: bytes
   seguidores: int
   repositoriosPublicos: int
@@ -50,7 +36,6 @@ class PerfilGithub:
   totalContribuicoes: int
   semanas: list[list[DiaContribuicao]]
   linguagens: list[Linguagem]
-  repositorios: dict[str, Repositorio]
 
 
 # ============================================================
@@ -72,20 +57,13 @@ query($login: String!) {
   user(login: $login) {
     login
     name
-    bio
     avatarUrl(size: 400)
     followers { totalCount }
     publicos: repositories(first: 100, privacy: PUBLIC, ownerAffiliations: OWNER) {
       totalCount
       nodes {
-        name
-        description
-        url
-        homepageUrl
         isFork
         stargazerCount
-        primaryLanguage { name color }
-        repositoryTopics(first: 8) { nodes { topic { name } } }
         languages(first: 10) { edges { size node { name } } }
       }
     }
@@ -141,14 +119,6 @@ def baixarAvatarJpeg(url: str) -> bytes:
   return saida.getvalue()
 
 
-def avatarComoDataUri(avatarJpeg: bytes, tamanho: int) -> str:
-  imagem = Image.open(io.BytesIO(avatarJpeg)).resize((tamanho, tamanho), Image.LANCZOS)
-  saida = io.BytesIO()
-  imagem.save(saida, format="JPEG", quality=82)
-  codificado = base64.b64encode(saida.getvalue()).decode()
-  return f"data:image/jpeg;base64,{codificado}"
-
-
 # ============================================================
 # 4. CONVERSÃO PARA O MODELO
 # ============================================================
@@ -183,21 +153,6 @@ def calcularLinguagens(repos: list[dict]) -> list[Linguagem]:
   return [Linguagem(nome, round(tamanho * 100 / total, 1)) for nome, tamanho in ordenadas]
 
 
-def converterRepositorio(repo: dict) -> Repositorio:
-  linguagem = repo["primaryLanguage"] or {"name": "", "color": "#94A3B8"}
-  topicos = [no["topic"]["name"] for no in repo["repositoryTopics"]["nodes"]]
-  return Repositorio(
-    nome=repo["name"],
-    descricao=repo["description"] or "",
-    url=repo["url"],
-    demo=repo["homepageUrl"] or "",
-    linguagem=linguagem["name"],
-    corLinguagem=linguagem["color"] or "#94A3B8",
-    topicos=topicos,
-    estrelas=repo["stargazerCount"],
-  )
-
-
 def buscarPerfilGithub(usuario: str) -> PerfilGithub:
   dados = executarConsultaGraphql(lerTokenGithub(), usuario)
   repos = dados["publicos"]["nodes"]
@@ -205,7 +160,6 @@ def buscarPerfilGithub(usuario: str) -> PerfilGithub:
   return PerfilGithub(
     usuario=dados["login"],
     nome=dados["name"] or dados["login"],
-    bio=dados["bio"] or "",
     avatarJpeg=baixarAvatarJpeg(dados["avatarUrl"]),
     seguidores=dados["followers"]["totalCount"],
     repositoriosPublicos=dados["publicos"]["totalCount"],
@@ -213,5 +167,4 @@ def buscarPerfilGithub(usuario: str) -> PerfilGithub:
     totalContribuicoes=calendario["totalContributions"],
     semanas=converterSemanas(calendario),
     linguagens=calcularLinguagens(repos),
-    repositorios={repo["name"]: converterRepositorio(repo) for repo in repos},
   )

@@ -2,11 +2,9 @@
   "usuario": "MaxRbrt",
   "subtitulo": "DESENVOLVEDOR FULL STACK · TAQUARITUBA, SP",
   "local": "Taquarituba, SP",
-  "foco": "Tela, API, banco e automações com n8n",
   "formacao": "Análise e Desenvolvimento de Sistemas",
   "status": "procurando a primeira vaga full stack júnior",
   "site": "https://maxrbrt.github.io/Portfolio/",
-  "etiquetas": ["TypeScript", "React", "Node.js", "NestJS", "MySQL", "n8n"],
   "stack": [
     {
       "categoria": "TELA",
@@ -24,20 +22,5 @@
       "categoria": "AUTOMAÇÃO",
       "itens": ["n8n", "Webhooks", "APIs REST"]
     }
-  ],
-  "destaques": [
-    {
-      "titulo": "APIs REST",
-      "texto": "NestJS, TypeORM e MySQL no estágio de desenvolvimento"
-    },
-    {
-      "titulo": "Interfaces",
-      "texto": "React, Vue e React Native com TypeScript"
-    },
-    {
-      "titulo": "Automação",
-      "texto": "Fluxos no n8n integrando APIs e webhooks"
-    }
-  ],
-  "projetos": ["ReciclaPlus", "EduTrack", "TicketFlow"]
+  ]
 }

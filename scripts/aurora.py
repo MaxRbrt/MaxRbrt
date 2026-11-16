@@ -6,7 +6,6 @@ from html import escape
 
 COR_FUNDO = "#0D1117"
 COR_SUPERFICIE = "#111827"
-COR_SUPERFICIE_2 = "#161B22"
 COR_TURQUESA = "#2DD4BF"
 COR_ESMERALDA = "#34D399"
 COR_VERDE_CLARO = "#6EE7B7"
@@ -182,18 +181,3 @@ values="{valoresDigitacao(largura)}"/>
 def valoresDigitacao(largura: float) -> str:
   passos = 16
   return ";".join(numero(largura * passo / passos) for passo in range(passos + 1))
-
-
-def quebrarTexto(texto: str, maximoCaracteres: int) -> list[str]:
-  linhas: list[str] = []
-  atual = ""
-  for palavra in texto.split():
-    candidata = f"{atual} {palavra}".strip()
-    if len(candidata) > maximoCaracteres and atual:
-      linhas.append(atual)
-      atual = palavra
-      continue
-    atual = candidata
-  if atual:
-    linhas.append(atual)
-  return linhas
