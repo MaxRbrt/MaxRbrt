@@ -95,7 +95,7 @@ def linhasFicha(usuario: str, campos: list[tuple[str, str]]) -> tuple[str, float
   comando = f"$ scan --perfil {usuario}"
   partes.append(linhaDigitada(0, comando, y, inicio, COR_VERDE_CLARO))
   for indice, (chave, valor) in enumerate(campos, start=1):
-    y += 20
+    y += 24
     texto = f"{chave:<11}{valor}"
     partes.append(linhaDigitada(indice, texto, y, inicio + indice * .22, COR_TEXTO, chave))
   return "".join(partes), y
@@ -144,7 +144,7 @@ def estiloScan() -> str:
 
 def gerarScan(usuario: str, avatarJpeg: bytes, campos: list[tuple[str, str]]) -> str:
   fichaSvg, ultimoY = linhasFicha(usuario.lower(), campos)
-  cursorY = ultimoY + 20
+  cursorY = ultimoY + 24
   inicioCursor = .3 + (len(campos) + 1) * .22
   cursor = (
     f'<g class="surgir" {atraso(inicioCursor)}><text class="mono" x="410" y="{numero(cursorY)}" font-size="12" '
