@@ -70,84 +70,72 @@ dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;10.95;21.89;32.84;43.78;54.73;65.67;76.62;87.56;98.5;109.45;120.4;131.34;142.28;153.23;164.18;175.12"/>
 </rect>
 </clipPath></defs><text class="mono" x="410" y="82" font-size="12" fill="#6EE7B7" clip-path="url(#recorteFicha0)">$ scan --perfil maxrbrt</text><defs><clipPath id="recorteFicha1">
-<rect x="408" y="89" width="0" height="18">
+<rect x="408" y="93" width="0" height="18">
 <animate attributeName="width" begin="0.52s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;9.08;18.17;27.25;36.34;45.42;54.51;63.59;72.68;81.76;90.85;99.93;109.02;118.1;127.19;136.27;145.36"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="102" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha1)"><tspan fill="#2DD4BF">usuário</tspan><tspan x="491.84" fill="#E6EDF3">@maxrbrt</tspan></text><defs><clipPath id="recorteFicha2">
-<rect x="408" y="109" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="106" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha1)"><tspan fill="#2DD4BF">usuário</tspan><tspan x="491.84" fill="#E6EDF3">@maxrbrt</tspan></text><defs><clipPath id="recorteFicha2">
+<rect x="408" y="117" width="0" height="18">
 <animate attributeName="width" begin="0.74s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;11.88;23.75;35.62;47.5;59.38;71.25;83.12;95;106.88;118.75;130.62;142.5;154.38;166.25;178.12;190"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="122" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha2)"><tspan fill="#2DD4BF">nome</tspan><tspan x="491.84" fill="#E6EDF3">Marcos Roberto</tspan></text><defs><clipPath id="recorteFicha3">
-<rect x="408" y="129" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="130" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha2)"><tspan fill="#2DD4BF">nome</tspan><tspan x="491.84" fill="#E6EDF3">Marcos Roberto</tspan></text><defs><clipPath id="recorteFicha3">
+<rect x="408" y="141" width="0" height="18">
 <animate attributeName="width" begin="0.96s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;16.52;33.05;49.57;66.1;82.62;99.15;115.67;132.2;148.72;165.25;181.77;198.3;214.82;231.35;247.87;264.4"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="142" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha3)"><tspan fill="#2DD4BF">função</tspan><tspan x="491.84" fill="#E6EDF3">Desenvolvedor Full Stack</tspan></text><defs><clipPath id="recorteFicha4">
-<rect x="408" y="149" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="154" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha3)"><tspan fill="#2DD4BF">função</tspan><tspan x="491.84" fill="#E6EDF3">Desenvolvedor Full Stack</tspan></text><defs><clipPath id="recorteFicha4">
+<rect x="408" y="165" width="0" height="18">
 <animate attributeName="width" begin="1.18s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;22.57;45.14;67.71;90.28;112.85;135.42;157.99;180.56;203.13;225.7;248.27;270.84;293.41;315.98;338.55;361.12"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="162" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha4)"><tspan fill="#2DD4BF">formação</tspan><tspan x="491.84" fill="#E6EDF3">Análise e Desenvolvimento de Sistemas</tspan></text><defs><clipPath id="recorteFicha5">
-<rect x="408" y="169" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="178" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha4)"><tspan fill="#2DD4BF">formação</tspan><tspan x="491.84" fill="#E6EDF3">Análise e Desenvolvimento de Sistemas</tspan></text><defs><clipPath id="recorteFicha5">
+<rect x="408" y="189" width="0" height="18">
 <animate attributeName="width" begin="1.4s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;12.34;24.68;37.02;49.36;61.7;74.04;86.38;98.72;111.06;123.4;135.74;148.08;160.42;172.76;185.1;197.44"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="182" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha5)"><tspan fill="#2DD4BF">local</tspan><tspan x="491.84" fill="#E6EDF3">Taquarituba, SP</tspan></text><defs><clipPath id="recorteFicha6">
-<rect x="408" y="189" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="202" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha5)"><tspan fill="#2DD4BF">local</tspan><tspan x="491.84" fill="#E6EDF3">Taquarituba, SP</tspan></text><defs><clipPath id="recorteFicha6">
+<rect x="408" y="213" width="0" height="18">
 <animate attributeName="width" begin="1.62s"
 dur="0.35s" fill="freeze" calcMode="discrete"
-values="0;26.29;52.58;78.87;105.16;131.45;157.74;184.03;210.32;236.61;262.9;289.19;315.48;341.77;368.06;394.35;420.64"/>
+values="0;10.48;20.96;31.44;41.92;52.4;62.88;73.36;83.84;94.32;104.8;115.28;125.76;136.24;146.72;157.2;167.68"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="202" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha6)"><tspan fill="#2DD4BF">stack</tspan><tspan x="491.84" fill="#E6EDF3">TypeScript · React · Node.js · NestJS · MySQL</tspan></text><defs><clipPath id="recorteFicha7">
-<rect x="408" y="209" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="226" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha6)"><tspan fill="#2DD4BF">repos</tspan><tspan x="491.84" fill="#E6EDF3">12 públicos</tspan></text><defs><clipPath id="recorteFicha7">
+<rect x="408" y="237" width="0" height="18">
 <animate attributeName="width" begin="1.84s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;19.78;39.56;59.34;79.12;98.9;118.68;138.46;158.24;178.02;197.8;217.58;237.36;257.14;276.92;296.7;316.48"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="222" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha7)"><tspan fill="#2DD4BF">linguagens</tspan><tspan x="491.84" fill="#E6EDF3">TypeScript 65% · JavaScript 11%</tspan></text><defs><clipPath id="recorteFicha8">
-<rect x="408" y="229" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="250" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha7)"><tspan fill="#2DD4BF">atividade</tspan><tspan x="491.84" fill="#E6EDF3">221 contribuições no último ano</tspan></text><defs><clipPath id="recorteFicha8">
+<rect x="408" y="261" width="0" height="18">
 <animate attributeName="width" begin="2.06s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;10.48;20.96;31.44;41.92;52.4;62.88;73.36;83.84;94.32;104.8;115.28;125.76;136.24;146.72;157.2;167.68"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="242" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha8)"><tspan fill="#2DD4BF">repos</tspan><tspan x="491.84" fill="#E6EDF3">12 públicos</tspan></text><defs><clipPath id="recorteFicha9">
-<rect x="408" y="249" width="0" height="18">
+</clipPath></defs><text class="mono" x="410" y="274" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha8)"><tspan fill="#2DD4BF">estrelas</tspan><tspan x="491.84" fill="#E6EDF3">0 recebidas</tspan></text><defs><clipPath id="recorteFicha9">
+<rect x="408" y="285" width="0" height="18">
 <animate attributeName="width" begin="2.28s"
-dur="0.35s" fill="freeze" calcMode="discrete"
-values="0;19.78;39.56;59.34;79.12;98.9;118.68;138.46;158.24;178.02;197.8;217.58;237.36;257.14;276.92;296.7;316.48"/>
-</rect>
-</clipPath></defs><text class="mono" x="410" y="262" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha9)"><tspan fill="#2DD4BF">atividade</tspan><tspan x="491.84" fill="#E6EDF3">221 contribuições no último ano</tspan></text><defs><clipPath id="recorteFicha10">
-<rect x="408" y="269" width="0" height="18">
-<animate attributeName="width" begin="2.5s"
-dur="0.35s" fill="freeze" calcMode="discrete"
-values="0;10.48;20.96;31.44;41.92;52.4;62.88;73.36;83.84;94.32;104.8;115.28;125.76;136.24;146.72;157.2;167.68"/>
-</rect>
-</clipPath></defs><text class="mono" x="410" y="282" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha10)"><tspan fill="#2DD4BF">estrelas</tspan><tspan x="491.84" fill="#E6EDF3">0 recebidas</tspan></text><defs><clipPath id="recorteFicha11">
-<rect x="408" y="289" width="0" height="18">
-<animate attributeName="width" begin="2.72s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;5.83;11.66;17.49;23.32;29.15;34.98;40.81;46.64;52.47;58.3;64.13;69.96;75.79;81.62;87.45;93.28"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="302" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha11)"><tspan fill="#2DD4BF">seguidores</tspan><tspan x="491.84" fill="#E6EDF3">3</tspan></text><defs><clipPath id="recorteFicha12">
+</clipPath></defs><text class="mono" x="410" y="298" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha9)"><tspan fill="#2DD4BF">seguidores</tspan><tspan x="491.84" fill="#E6EDF3">3</tspan></text><defs><clipPath id="recorteFicha10">
 <rect x="408" y="309" width="0" height="18">
-<animate attributeName="width" begin="2.94s"
+<animate attributeName="width" begin="2.5s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;17.92;35.84;53.76;71.68;89.6;107.52;125.44;143.36;161.28;179.2;197.12;215.04;232.96;250.88;268.8;286.72"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="322" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha12)"><tspan fill="#2DD4BF">site</tspan><tspan x="491.84" fill="#E6EDF3">maxrbrt.github.io/Portfolio</tspan></text><defs><clipPath id="recorteFicha13">
-<rect x="408" y="329" width="0" height="18">
-<animate attributeName="width" begin="3.16s"
+</clipPath></defs><text class="mono" x="410" y="322" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha10)"><tspan fill="#2DD4BF">site</tspan><tspan x="491.84" fill="#E6EDF3">maxrbrt.github.io/Portfolio</tspan></text><defs><clipPath id="recorteFicha11">
+<rect x="408" y="333" width="0" height="18">
+<animate attributeName="width" begin="2.72s"
 dur="0.35s" fill="freeze" calcMode="discrete"
 values="0;25.82;51.65;77.47;103.3;129.12;154.95;180.78;206.6;232.42;258.25;284.07;309.9;335.72;361.55;387.38;413.2"/>
 </rect>
-</clipPath></defs><text class="mono" x="410" y="342" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha13)"><tspan fill="#2DD4BF">status</tspan><tspan x="491.84" fill="#E6EDF3">procurando a primeira vaga full stack júnior</tspan></text><g class="surgir" style="animation-delay:3.38s"><text class="mono" x="410" y="362" font-size="12" fill="#6EE7B7">$ <tspan class="cursor-final">█</tspan></text></g><defs><linearGradient id="faixaScanner" x1="0" y1="0" x2="0" y2="1">
+</clipPath></defs><text class="mono" x="410" y="346" font-size="12" fill="#E6EDF3" clip-path="url(#recorteFicha11)"><tspan fill="#2DD4BF">status</tspan><tspan x="491.84" fill="#E6EDF3">procurando a primeira vaga full stack júnior</tspan></text><g class="surgir" style="animation-delay:2.94s"><text class="mono" x="410" y="370" font-size="12" fill="#6EE7B7">$ <tspan class="cursor-final">█</tspan></text></g><defs><linearGradient id="faixaScanner" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0" stop-color="#2DD4BF" stop-opacity="0"/>
 <stop offset=".8" stop-color="#2DD4BF" stop-opacity=".2"/>
 <stop offset="1" stop-color="#6EE7B7" stop-opacity=".55"/>

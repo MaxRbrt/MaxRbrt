@@ -11,7 +11,6 @@
 @keyframes piscar{0%{opacity:1}50%{opacity:0}}
 
 .barra-tile{transform-box:fill-box;transform-origin:left center;animation:crescer 1.6s cubic-bezier(.2,.8,.2,1) both}
-.pulso{animation:piscar 1.8s ease-in-out infinite}
 @keyframes crescer{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
 @media (prefers-reduced-motion:reduce){
