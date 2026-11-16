@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="228" viewBox="0 0 860 228" role="img" aria-label="Destaques: APIs REST, Interfaces, Automação">
+<title>Destaques: APIs REST, Interfaces, Automação</title>
+<style>
+.mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+.surgir{opacity:0;animation:surgir .8s cubic-bezier(.2,.7,.2,1) forwards}
+.borda-viva{animation:bordaViva 4.8s ease-in-out infinite}
+.piscar{animation:piscar 1.1s steps(1) infinite}
+@keyframes surgir{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes bordaViva{0%,100%{stroke-opacity:.55}50%{stroke-opacity:1}}
+@keyframes piscar{0%{opacity:1}50%{opacity:0}}
+
+.brilho-topo{animation:passarBrilho 5s ease-in-out infinite}
+@keyframes passarBrilho{0%{transform:translateX(-120px);opacity:0}20%{opacity:1}60%,100%{transform:translateX(260px);opacity:0}}
+
+@media (prefers-reduced-motion:reduce){
+*{animation:none!important}
+.surgir{opacity:1}
+.so-animado{display:none}
+}
+</style>
+<defs>
+<linearGradient id="borda" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#2DD4BF"/>
+<stop offset=".55" stop-color="#22D3EE" stop-opacity=".55"/>
+<stop offset="1" stop-color="#34D399"/>
+</linearGradient>
+<linearGradient id="fundo" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#111827"/>
+<stop offset="1" stop-color="#0D1117"/>
+</linearGradient>
+<linearGradient id="destaque" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#6EE7B7"/>
+<stop offset=".5" stop-color="#2DD4BF"/>
+<stop offset="1" stop-color="#22D3EE"/>
+</linearGradient>
+<radialGradient id="auraLateral" cx="0" cy="114" r="473"
+gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#2DD4BF" stop-opacity=".17"/>
+<stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="linhaTopo" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#2DD4BF" stop-opacity="0"/>
+<stop offset=".5" stop-color="#6EE7B7" stop-opacity=".9"/>
+<stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+</linearGradient>
+<filter id="brilho" x="-30%" y="-30%" width="160%" height="160%">
+<feGaussianBlur stdDeviation="2.4" result="desfoque"/>
+<feMerge><feMergeNode in="desfoque"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<rect x=".5" y=".5" width="859" height="227" rx="18" fill="url(#fundo)"/>
+<rect x=".5" y=".5" width="859" height="227" rx="18" fill="url(#auraLateral)"/>
+<rect x="7.5" y="7.5" width="845" height="213" rx="12" fill="none"
+stroke="#30363D" stroke-opacity=".55"/>
+<rect x="60" y="0" width="740" height="1.4" fill="url(#linhaTopo)"/>
+<rect class="borda-viva" x=".5" y=".5" width="859" height="227" rx="18"
+fill="none" stroke="url(#borda)" stroke-width="1.4"/>
+<g class="surgir">
+<text class="mono" x="40" y="46" font-size="13" font-weight="700" letter-spacing="3" fill="#2DD4BF">DESTAQUES</text>
+<text class="sans" x="40" y="68" font-size="13" fill="#94A3B8">Onde eu mais trabalho hoje</text>
+<text class="mono" x="820" y="46" font-size="11" text-anchor="end" fill="#6EE7B7" fill-opacity=".55">&gt; highlights --top 3</text>
+</g><g class="surgir" style="animation-delay:0.2s">
+<rect x="40" y="88" width="249.33" height="112" rx="12" fill="#2DD4BF" fill-opacity=".045" stroke="#30363D"/>
+<g clip-path="url(#recorteDestaque0)"><rect class="brilho-topo so-animado" style="animation-delay:0s" x="40" y="88" width="90" height="1.5" fill="url(#linhaTopo)"/></g>
+<clipPath id="recorteDestaque0"><rect x="40" y="88" width="249.33" height="4"/></clipPath>
+<text class="mono" x="58" y="116" font-size="11" letter-spacing="2" fill="#2DD4BF">01</text>
+<text class="sans" x="58" y="142" font-size="18" font-weight="700" fill="#E6EDF3">APIs REST</text>
+<text class="sans" x="58" y="166" font-size="12.5" fill="#94A3B8"><tspan x="58" dy="0">NestJS, TypeORM e MySQL no estágio</tspan><tspan x="58" dy="18">de desenvolvimento</tspan></text>
+</g><g class="surgir" style="animation-delay:0.38s">
+<rect x="305.33" y="88" width="249.33" height="112" rx="12" fill="#2DD4BF" fill-opacity=".045" stroke="#30363D"/>
+<g clip-path="url(#recorteDestaque1)"><rect class="brilho-topo so-animado" style="animation-delay:0.6s" x="305.33" y="88" width="90" height="1.5" fill="url(#linhaTopo)"/></g>
+<clipPath id="recorteDestaque1"><rect x="305.33" y="88" width="249.33" height="4"/></clipPath>
+<text class="mono" x="323.33" y="116" font-size="11" letter-spacing="2" fill="#2DD4BF">02</text>
+<text class="sans" x="323.33" y="142" font-size="18" font-weight="700" fill="#E6EDF3">Interfaces</text>
+<text class="sans" x="323.33" y="166" font-size="12.5" fill="#94A3B8"><tspan x="323.33" dy="0">React, Vue e React Native com</tspan><tspan x="323.33" dy="18">TypeScript</tspan></text>
+</g><g class="surgir" style="animation-delay:0.56s">
+<rect x="570.67" y="88" width="249.33" height="112" rx="12" fill="#2DD4BF" fill-opacity=".045" stroke="#30363D"/>
+<g clip-path="url(#recorteDestaque2)"><rect class="brilho-topo so-animado" style="animation-delay:1.2s" x="570.67" y="88" width="90" height="1.5" fill="url(#linhaTopo)"/></g>
+<clipPath id="recorteDestaque2"><rect x="570.67" y="88" width="249.33" height="4"/></clipPath>
+<text class="mono" x="588.67" y="116" font-size="11" letter-spacing="2" fill="#2DD4BF">03</text>
+<text class="sans" x="588.67" y="142" font-size="18" font-weight="700" fill="#E6EDF3">Automação</text>
+<text class="sans" x="588.67" y="166" font-size="12.5" fill="#94A3B8"><tspan x="588.67" dy="0">Fluxos no n8n integrando APIs e</tspan><tspan x="588.67" dy="18">webhooks</tspan></text>
+</g>
+</svg>
