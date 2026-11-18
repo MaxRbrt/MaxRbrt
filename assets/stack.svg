@@ -62,14 +62,14 @@ fill="none" stroke="url(#borda)" stroke-width="1.4"/>
 <text class="mono" x="820" y="46" font-size="11" text-anchor="end" fill="#6EE7B7" fill-opacity=".55">&gt; stack.scan</text>
 </g><text class="mono surgir" x="40" y="104" font-size="10.5" letter-spacing="1.5" fill="#2DD4BF">LINGUAGENS · VOLUME DE CÓDIGO</text><g class="surgir" style="animation-delay:0.2s">
 <text class="mono" x="40" y="132" font-size="12" fill="#E6EDF3">TypeScript</text>
-<text class="mono" x="380" y="132" font-size="12" text-anchor="end" fill="#94A3B8">68%</text>
+<text class="mono" x="380" y="132" font-size="12" text-anchor="end" fill="#94A3B8">66%</text>
 <rect x="40" y="141" width="340" height="6" rx="3" fill="#30363D" fill-opacity=".6"/>
-<rect class="barra-tile" style="animation-delay:0.4s" x="40" y="141" width="232.9" height="6" rx="3" fill="url(#destaque)"/>
+<rect class="barra-tile" style="animation-delay:0.4s" x="40" y="141" width="222.7" height="6" rx="3" fill="url(#destaque)"/>
 </g><g class="surgir" style="animation-delay:0.3s">
 <text class="mono" x="40" y="172" font-size="12" fill="#E6EDF3">JavaScript</text>
-<text class="mono" x="380" y="172" font-size="12" text-anchor="end" fill="#94A3B8">10%</text>
+<text class="mono" x="380" y="172" font-size="12" text-anchor="end" fill="#94A3B8">11%</text>
 <rect x="40" y="181" width="340" height="6" rx="3" fill="#30363D" fill-opacity=".6"/>
-<rect class="barra-tile" style="animation-delay:0.5s" x="40" y="181" width="34.34" height="6" rx="3" fill="url(#destaque)"/>
+<rect class="barra-tile" style="animation-delay:0.5s" x="40" y="181" width="38.76" height="6" rx="3" fill="url(#destaque)"/>
 </g><g class="surgir" style="animation-delay:0.4s">
 <text class="mono" x="40" y="212" font-size="12" fill="#E6EDF3">CSS</text>
 <text class="mono" x="380" y="212" font-size="12" text-anchor="end" fill="#94A3B8">9%</text>
@@ -77,14 +77,14 @@ fill="none" stroke="url(#borda)" stroke-width="1.4"/>
 <rect class="barra-tile" style="animation-delay:0.6s" x="40" y="221" width="30.6" height="6" rx="3" fill="url(#destaque)"/>
 </g><g class="surgir" style="animation-delay:0.5s">
 <text class="mono" x="40" y="252" font-size="12" fill="#E6EDF3">Vue</text>
-<text class="mono" x="380" y="252" font-size="12" text-anchor="end" fill="#94A3B8">8%</text>
+<text class="mono" x="380" y="252" font-size="12" text-anchor="end" fill="#94A3B8">9%</text>
 <rect x="40" y="261" width="340" height="6" rx="3" fill="#30363D" fill-opacity=".6"/>
-<rect class="barra-tile" style="animation-delay:0.7s" x="40" y="261" width="26.86" height="6" rx="3" fill="url(#destaque)"/>
+<rect class="barra-tile" style="animation-delay:0.7s" x="40" y="261" width="30.6" height="6" rx="3" fill="url(#destaque)"/>
 </g><g class="surgir" style="animation-delay:0.6s">
 <text class="mono" x="40" y="292" font-size="12" fill="#E6EDF3">HTML</text>
 <text class="mono" x="380" y="292" font-size="12" text-anchor="end" fill="#94A3B8">3%</text>
 <rect x="40" y="301" width="340" height="6" rx="3" fill="#30363D" fill-opacity=".6"/>
-<rect class="barra-tile" style="animation-delay:0.8s" x="40" y="301" width="8.84" height="6" rx="3" fill="url(#destaque)"/>
+<rect class="barra-tile" style="animation-delay:0.8s" x="40" y="301" width="9.86" height="6" rx="3" fill="url(#destaque)"/>
 </g><rect x="408" y="92" width="1" height="250.5" fill="#30363D"/><g class="surgir" style="animation-delay:0.3s"><text class="mono" x="432" y="104" font-size="10.5" letter-spacing="1.5" fill="#2DD4BF">TELA</text><g>
 <rect x="432" y="112" width="50.55" height="22.5" rx="11.25"
 fill="#2DD4BF" fill-opacity=".08" stroke="#2DD4BF" stroke-opacity=".45"/>
